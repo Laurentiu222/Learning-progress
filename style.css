@@ -85,3 +85,7 @@ p {
   font-size: large;
   font-weight: normal;
 }
+.center_text{
+  text-align: center;
+  color: red;
+}
