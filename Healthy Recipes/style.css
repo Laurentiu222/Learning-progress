@@ -1,0 +1,39 @@
+img{
+  height: 200px;
+  align-items: right;
+  }
+
+.description{
+  font-size: 20px;
+  font-weight: bold;
+}
+#cook-time{
+  font-weight: bold;
+  color:red;
+}
+
+.ingredients li{
+list-style: square;
+font-size: 20px;
+color: blue;
+}
+
+.time{
+  color:red;
+}
+
+.external-link{
+  color:seagreen;
+}
+h1,h2,p,li{
+font-family: Helvetica;
+}
+
+body{
+  background-color:gold;
+}
+.title{
+  color:green;
+  font-family: Arial;
+  font-weight: bolder;
+}
