@@ -22,6 +22,10 @@
 }
 p{
   display: inline;
+  font-size: 26;
+}
+h3{
+  font-size: 30;
 }
 header{
   font-family: Helvetica;
@@ -34,7 +38,4 @@ header{
   background-image: url("pattern.jpeg");
   position: static;
   margin-top:50px ;
-}
-main{
-  
 }
