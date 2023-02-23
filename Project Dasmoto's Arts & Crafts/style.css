@@ -1,0 +1,40 @@
+.brush{
+  font-family: Helvetica;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: mediumaquamarine;
+}
+
+.frames{
+  font-family: Helvetica;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: lightcoral;
+}
+.paint{
+  font-family: Helvetica;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: skyblue;
+}
+p{
+  display: inline;
+}
+header{
+  font-family: Helvetica;
+  font-size: 100px;
+  font-weight: bold;
+  color:khaki;
+  text-align: center;
+}
+.banner{
+  background-image: url("pattern.jpeg");
+  position: static;
+  margin-top:50px ;
+}
+main{
+  
+}
