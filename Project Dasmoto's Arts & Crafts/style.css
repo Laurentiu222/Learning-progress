@@ -39,3 +39,7 @@ header{
   position: static;
   margin-top:50px ;
 }
+head,
+body{
+  background-color: gold;
+}
