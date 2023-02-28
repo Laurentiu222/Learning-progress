@@ -17,7 +17,7 @@ ul li {
 ul li a {
   display: block;
   padding-right: 110px;
-  color: #fff;
+  color: black;
   text-decoration: none;
   text-align: center;
   font-size: 20px;
@@ -32,43 +32,42 @@ ul li ul.dropdown {
   display: none;
 }
 ul li a:hover {
-  background: black;
+  background: aqua;
 }
 ul li:hover ul.dropdown {
   display: block;
 }
 
-
-.about_section{
+.about_section {
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: black;
 }
-.about_body{
+.about_body {
   background-image: url(about-img/back.jpg);
   align-items: center;
 }
 
-.about_img{
+.about_img {
   width: 200px;
   height: 200px;
 }
-.cards{
-  display:flex;
+.cards {
+  display: flex;
   gap: 2em;
 }
-.card{
+.card {
   padding: 1rem;
 
   border-radius: 0.25rem;
   position: relative;
 }
-.about_h1{
-  font-family: 'Times New Roman', Times, serif;
+.about_h1 {
+  font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
-  font-size: larger;
-  
+  font-size: 50px;
+  text-align: center;
 }
 .img {
   height: 15px;
@@ -78,3 +77,6 @@ ul li:hover ul.dropdown {
   background-color: aqua;
 }
 
+h2{
+  margin-top: 50px;
+}
