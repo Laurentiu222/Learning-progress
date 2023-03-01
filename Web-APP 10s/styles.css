@@ -8,20 +8,22 @@ header {
 }
 
 .main {
-  background-image: url(img/title.jpg);
+  background-image: url(img/munti.jpg);
 }
+
 .img {
   height: 15px;
   width: 15px;
 }
 .btn {
-  background-color: green;
+  background-color: purple;
 }
 
 .container {
   padding: 0;
   margin: 0;
   font-family: monospace;
+  background:transparent;
 }
 
 ul {
@@ -49,8 +51,30 @@ ul li ul.dropdown {
   display: none;
 }
 ul li a:hover {
-  background: black;
+  background-color:rgb(35, 0, 115) ;
 }
 ul li:hover ul.dropdown {
   display: block;
+}
+.cards {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.card {
+  padding: 1rem;
+  border:solid 3px lightskyblue;
+  border-radius: 0.25rem;
+  position: relative;
+
+}
+img{
+  width: 300px;
+  height: 200px;
+}
+.description{
+  color: #fff;
 }
