@@ -32,7 +32,7 @@ ul li ul.dropdown {
   display: none;
 }
 ul li a:hover {
-  background: aqua;
+  background: lightblue;
 }
 ul li:hover ul.dropdown {
   display: block;
@@ -74,7 +74,7 @@ ul li:hover ul.dropdown {
   width: 15px;
 }
 .btn2 {
-  background-color: aqua;
+  background-color: lightblue;
 }
 
 h2{
