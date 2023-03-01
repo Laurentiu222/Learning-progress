@@ -21,9 +21,11 @@ header {
 
 .container {
   padding: 0;
-  margin: 0;
+  margin: -30px;
   font-family: monospace;
   background:transparent;
+  position: fixed;
+  z-index: 999;
 }
 
 ul {
@@ -57,7 +59,7 @@ ul li:hover ul.dropdown {
   display: block;
 }
 .cards {
-  margin-top: 80px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 2em;
