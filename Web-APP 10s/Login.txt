@@ -1,0 +1,6 @@
+Pentru vizualizarea corecta a site-ului se va da run and debug din Login.html
+email:
+admin@gmail.com
+Pass:
+admin123
+butonul de login va duce atumat la pagina principala pt a nu fi nevoie sa fie adaugat mereu contul pt testarea codului

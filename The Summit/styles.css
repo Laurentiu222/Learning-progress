@@ -1,0 +1,34 @@
+a{
+  color: red;
+}
+
+.nav-link{
+  border:2px solid red;
+  border-radius:10px;
+}
+.nav-link:hover{
+  background-color:pink;
+}
+.btn{
+    border: 2px solid red;
+  border-radius:10px;
+  font-size:large;
+  font-weight:bolder;
+}
+.btn:active{
+color:blue;
+}
+.btn:hover{
+  background-color:yellow;
+}
+.activity{
+font-family:'Times New Roman';
+border:3px solid blue;
+border-radius:10px
+}
+.activity:hover{
+  background-color:pink;
+}
+.activity:active{
+  background-color:red;
+}

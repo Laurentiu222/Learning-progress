@@ -26,6 +26,7 @@ header {
   background:transparent;
   position: fixed;
   z-index: 999;
+  backdrop-filter: blur(20px);
 }
 
 ul {
