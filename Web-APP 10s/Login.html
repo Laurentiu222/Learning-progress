@@ -28,14 +28,16 @@
           <p>Don't have a account <a href="#">Register</a></p>
         </div>
       </form>
+
+      
   </section>
   <script>
     function auth(){
       var email = document.getElementById("email").value;
       var password = document.getElementById("password").value;
       if(email=="admin@gmail.com" && password=="admin123"){
-        window.location.assign("index.html");
         alert("Login succsessfully");
+        window.location.href = "index.html";
         //echo <script> window.location.assign('index.html'); </script>;
       }else{
         alert("Invalid Info");
