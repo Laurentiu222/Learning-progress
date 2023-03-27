@@ -72,9 +72,10 @@ width: 1000px;
 .main{
   display: flex;
   gap:40px;
-  
+  justify-content: center;
+  margin-top: 150px;
 }
 
 .cards{
-  
+  width: 3000px;
 }
