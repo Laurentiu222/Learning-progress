@@ -1,0 +1,65 @@
+html{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+  text-align: center;
+  font-size: 4rem;
+  color: burlywood;
+}
+.nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+li{
+  list-style: none;
+}
+a{
+  color: black;
+  font-size: 2rem;
+}
+.mission{
+  background-image: url(img/skyscrapers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  background-color: #fff;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.list_element{
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+.list_element p{
+  font-size: 1.50rem;
+  font-weight: bold;
+  min-width: 240px;
+  text-align: center;
+  padding: 5px;
+}
+.list_element img{
+  padding: auto;
+  margin: 15px;
+  height: auto;
+  width: 200px;
+}
+
+
