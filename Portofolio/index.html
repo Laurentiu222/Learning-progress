@@ -13,21 +13,87 @@
         <a href="#">Menu</a>
         <ul class="dropdown">
           <li><a href="index.html">Home<ion-icon name="home-outline"></ion-icon></a></li>
-          <li><a href="skills.html">Skills<ion-icon name="alert-outline"></ion-icon></a></li>
-          <li><a href="About.html">About<ion-icon name="alert-outline"></ion-icon></a></li>
+          <li><a href="skills.html">Skills<ion-icon name="stats-chart-outline"></ion-icon></a></li>
         </ul>
   </div>
-  <header>
+  <header class="dis">
     <h1>Portofolio</h1>
   </header>
   </div>
   <div class="top">
     <img src="img/337559126_719389006641289_4318052202464845794_n.jpg">
-  <div class="hi">
-    <h1>Hello and Welcome to my portofolio</h1>
-    <h1>I am Bacila Laurentiu-Mihai</h1>
+    <div class="hi">
+      <h1>Hello and Welcome to my portofolio</h1>
+      <h1>I am Bacila Laurentiu-Mihai</h1>
+    </div>
   </div>
+  <div id="about">
+    <div class="conteiner3">
+      <div class="row">
+        <div class="about-collum-1">
+          <h1 class="sub-title">About Me</h1>
+          <p>Hi there! My name is Laur and I'm a creative and fun-loving person. I absolutely love playing video games
+            and socializing with my friends. Whenever I have the chance, I enjoy going on trips to explore new places
+            and learn new things. Whether it's trying out a new hobby or visiting a new city, I always bring a sense of
+            excitement and adventure to everything I do. One of my greatest passions is meeting new people from
+            different backgrounds and cultures. I love learning about different perspectives and ideas, and am always
+            looking for ways to broaden my understanding of the world. In my free time, you can often find me indulging
+            in creative pursuits like writing, painting, or crafting. My positive energy and infectious personality make
+            me a joy to be around. I'm always up for a good time and know how to make the most out of any situation.
+            Whether it's a night out with friends or a quiet evening at home, I guarantee that my company will brighten
+            your day.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('general')">General</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="general">
+            <ul>
+              <li><span>Age</span><br>22</li>
+              <li><span>Gender</span><br>Masculin</li>
+              <li><span>City</span><br>Craiova</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>High School</span><br>Theoretical Highschool "Tudor Arghezi"</li>
+              <li><span>University</span><br>Faculty of Automation, Computers, and Electronics Craiova</li>
+              <li><span>Codecademy</span><br>Frontend 30%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <footer>
+  <div id="contact">
+    <div class="row">
+      <div class="contact-mid">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><ion-icon name="mail-outline"></ion-icon>laurmbacila@yahoo.com</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/laur.frizilic"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com/laur_mihai22/"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/laurentiu-bacila-b25b3424a/"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://github.com/Laurentiu222/Learning-progress.git"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
 </body>
 
 
