@@ -62,4 +62,51 @@ a{
   width: 200px;
 }
 
+.team{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(img/background_team.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 70px;
 
+}
+.team-member{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+  width: 20%;
+  height: auto;
+  z-index: 999;
+}
+.team-member img{
+  width: 200px;
+  height: 300px;
+}
+
+.team-member{
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 240px;
+  text-align: center;
+  padding: 5px;
+  justify-content: center;
+}
+
+.sub-title h1{
+  text-align: center;
+  color: black;
+}
+
+.foot h1{
+  text-align: center;
+  color: black;
+}
+.foot{
+  text-align: center;
+  color: black;
+  font-size: 1.25rem;
+  line-height: 65px;
+}
