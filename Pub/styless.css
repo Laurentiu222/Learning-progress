@@ -29,12 +29,17 @@ header {
 
 .banner {
   background-image: url(img/restaurant.jpg);
+  background-position: 30%;
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.second {
+  margin-top: 50px;
 }
 
 .sub-title {
@@ -58,6 +63,8 @@ header {
 .drinks {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around;
   color: aliceblue;
   font-size: 1.5rem;
@@ -102,11 +109,6 @@ header {
   box-shadow: 0 8px 8px 0 gold;
 }
 
-/*@media only screen and (max-width:680px){
-  .sub-title{
-    color:purple;
-  }
-}*/
 .row {
   display: flex;
   justify-content: space-between;
@@ -139,7 +141,7 @@ header {
 .tab-contents ul li span {
   color: white;
   font-size: 25px;
-
+  margin: 0;
 }
 
 .tab-contents {
@@ -154,6 +156,59 @@ header {
 
 li {
   color: gold;
-  font-size: 1.25rem;
+  font-size: 1.10rem;
   width: 100%;
 }
+
+.ing ul {
+  display: flex;
+  flex-direction: inherit;
+  gap: 15px;
+}
+
+.third {
+  margin-top: 50px;
+  background-image: url(img/image.png);
+  background-position: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  color: gold;
+}
+
+.adress {
+  font-size: 1.5rem;
+  color: gold;
+}
+
+@media only screen and (max-width:680px) {
+  #img-drinks {
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width:680px) {
+
+  .tab-links,
+  .tab-titles {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+}
+
