@@ -1,0 +1,67 @@
+<div class="tab-titles">
+  <img class="tab-links active-link" onclick="opentab('burger')" src="img/burger.webp">
+  <img class="tab-links active-link" onclick="opentab('carbonara')" src="img/carbonara.jpg">
+  <img class="tab-links active-link" onclick="opentab('bruschete')" src="img/bruschete.jpg">
+</div>
+<div class="tab-contents active-tab" id="burger">
+  <ul>
+    <li><span>Meat</span><br>Cow, Pig, Chicken</li>
+    <li><span>Salad</span><br>Tomatos, Cabbage, Pickles</li>
+    <li><span>Bread</span><br>English Muffin</li>
+  </ul>
+</div>
+<div class="tab-contents active-tab" id="carbonara">
+  <ul>
+    <li><span>Pasta</span><br>Italian</li>
+    <li><span>Cheese</span><br>Pecorino</li>
+    <li><span>Vegetables</span><br>Plump, Garlic Cloves, Peeled</li>
+  </ul>
+</div>
+<div class="tab-contents active-tab" id="bruschete">
+  <ul>
+    <li><span>Bread</span><br>English Muffin Toast</li>
+    <li><span>Vegetables</span><br>Tomatos</li>
+    <li><span>Meat</span><br>Salami, Fish</li>
+  </ul>
+</div>
+
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right:50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #0004ff;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 50%;
+}
+.tab-contents ul li{
+  display: block;
+  list-style: none;
+ margin-left: -40px;
+}
+.tab-contents ul li span{
+  color: #0004ff;
+  font-size: 25px;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}

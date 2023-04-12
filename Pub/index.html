@@ -36,15 +36,76 @@
       <h1>-S-</h1>
     </div>
     <div class="photos">
-      <img src="img/sex-on-the-beach-0026fb2.jpg">
-      <img src="img/vodka-mojito-recipe-5192553-step_05-43680e4632544c72b77d72b24f7a482e.jpg">
-      <img src="img/images.jpg">
-      <img src="img/sex-on-the-beach-0026fb2.jpg">
-      
-      
+      <img id="img-drinks" src="img/sex-on-the-beach-0026fb2.jpg">
+      <img id="img-drinks" src="img/vodka-mojito-recipe-5192553-step_05-43680e4632544c72b77d72b24f7a482e.jpg">
+      <img id="img-drinks" src="img/images.jpg">
+      <img id="img-drinks" src="img/cocktail.jpg">
     </div>
   </div>
+
+  <div class="second">
+    <div class="food">
+      <h1>-F-</h1>
+      <h1>-O-</h1>
+      <h1>-O-</h1>
+      <h1>-D-</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tab-titles">
+      <img class="tab-links img-food active-link" onclick="opentab('burger')" src="img/burger.webp">
+      <img class="tab-links img-food active-link" onclick="opentab('carbonara')" src="img/carbonara.jpg">
+      <img class="tab-links img-food active-link" onclick="opentab('bruschete')" src="img/bruschete.jpg">
+    </div>
+    <div class="ing">
+      <div class="tab-contents active-tab" id="burger">
+        <ul>
+          <li><span>Meat</span><br>Cow, Pig, Chicken</li>
+          <li><span>Salad</span><br>Tomatos, Cabbage, Pickles</li>
+          <li><span>Bread</span><br>English Muffin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ing">
+      <div class="tab-contents active-tab" id="carbonara">
+        <ul>
+          <li><span>Pasta</span><br>Italian</li>
+          <li><span>Cheese</span><br>Pecorino</li>
+          <li><span>Vegetables</span><br>Plump, Garlic Cloves, Peeled</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ing">
+      <div class="tab-contents active-tab" id="bruschete">
+        <ul>
+          <li><span>Bread</span><br>English Muffin Toast</li>
+          <li><span>Vegetables</span><br>Tomatos</li>
+          <li><span>Meat</span><br>Salami, Fish</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </body>
-<script> src = "main.js"</script>
+<script>
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  var invis = document.getElementsByClassName("ing");
+  invis.style.visibility='hidden';
+  tabcontents.addEventListener('click', open);
+</script>
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
 
 </html>

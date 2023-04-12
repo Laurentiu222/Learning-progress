@@ -1,31 +1,33 @@
-html{
-  font-size:16px;
+html {
+  font-size: 16px;
   margin: 20px;
   background-color: black;
 }
 
-header{
+header {
   display: flex;
   color: aliceblue;
 }
-.conteiner{
+
+.conteiner {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.list ul{
+
+.list ul {
   display: flex;
-  gap:20px;
+  gap: 20px;
   list-style: none;
   font-size: 1.35rem;
 }
 
-.list a{
+.list a {
   color: aliceblue;
   text-decoration: none;
 }
 
-.banner{
+.banner {
   background-image: url(img/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,7 +36,8 @@ header{
   justify-content: center;
   align-items: center;
 }
-.sub-title{
+
+.sub-title {
   color: gold;
   font-size: 2rem;
   text-align: center;
@@ -43,40 +46,114 @@ header{
   padding: 15px;
   text-shadow: 8px 8px black;
 }
-.sub-title:hover{
+
+.sub-title:hover {
   translate: 15px;
   backdrop-filter: blur(20px);
   border-radius: 20px;
   font-size: 2.5rem;
+  border: 2px solid gold;
 }
-.drinks{
+
+.drinks {
   margin-top: 20px;
   display: flex;
-  justify-content:space-around ;
+  justify-content: space-around;
   color: aliceblue;
   font-size: 1.5rem;
 }
-.drinks h1:hover{
-  color:gold;
-  
+
+.drinks h1:hover {
+  color: gold;
+
 }
+
 .photos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  
+
 }
-.photos img:hover{
-  box-shadow: 0 4px 8px 0 gold;
+
+.photos img:hover {
+  box-shadow: 0 8px 8px 0 gold;
 }
-img{
-  width:300px;
-  height: 300px;
+
+#img-drinks {
+  width: 20%
+}
+
+
+
+.food {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.food h1:hover {
+  color: gold;
+}
+
+.img-food:hover {
+  box-shadow: 0 8px 8px 0 gold;
 }
 
 /*@media only screen and (max-width:680px){
   .sub-title{
     color:purple;
   }
+}*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.tab-titles {
+  display: flex;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  width: 30%;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  display: block;
+  list-style: none;
+}
+
+.tab-contents ul li span {
+  color: white;
+  font-size: 25px;
+
+}
+
+.tab-contents {
+  display: none;
+
+}
+
+.tab-contents.active-tab {
+  display: block;
+
+}
+
+li {
+  color: gold;
+  font-size: 1.25rem;
+  width: 100%;
 }
