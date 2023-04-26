@@ -164,7 +164,7 @@
 //----------------------------------------------------------------------
 // function calculator(str) {
 //   return eval(str);
-  
+
 // }
 // console.log(calculator("23+4"));
 // console.log(calculator("45-15"));
@@ -374,37 +374,180 @@
 //----------------------------------------------------------------------
 // function derivative(b, m) {
 // 	return b*Math.pow(m,b-1);
-   
+
 // }
 // console.log(derivative(1, 4));
 // console.log(derivative(3, -2));
 // console.log(derivative(4, -3));
 //----------------------------------------------------------------------
-function generation(x, y) {
-	if(x===0){
-    return 'me';
-  }else if(x===1 && y==='f'){
-    return 'daughter';
-  }else if(x===1 && y==='m'){
-    return 'son';
-  }else if(x===2 && y==='m'){
-    return 'grandson';
-  }else if(x===2 && y==='f'){
-    return 'granddaughter';
-  }else if(x===3 && y==='f'){
-    return 'great granddaughter';
-  }else if(x===3 && y==='m'){
-    return 'great grandson';
-  }else if(x===-1 && y==='m'){
-    return 'father';
-  }else if(x===-1 && y==='f'){
-    return 'mother';
-  }else if(x===-2 && y==='f'){
-    return 'grandmother';
-  }else if(x===-2 && y==='m'){
-    return 'grandfather';
+// function generation(x, y) {
+// 	if(x===0){
+//     return 'me';
+//   }else if(x===1 && y==='f'){
+//     return 'daughter';
+//   }else if(x===1 && y==='m'){
+//     return 'son';
+//   }else if(x===2 && y==='m'){
+//     return 'grandson';
+//   }else if(x===2 && y==='f'){
+//     return 'granddaughter';
+//   }else if(x===3 && y==='f'){
+//     return 'great granddaughter';
+//   }else if(x===3 && y==='m'){
+//     return 'great grandson';
+//   }else if(x===-1 && y==='m'){
+//     return 'father';
+//   }else if(x===-1 && y==='f'){
+//     return 'mother';
+//   }else if(x===-2 && y==='f'){
+//     return 'grandmother';
+//   }else if(x===-2 && y==='m'){
+//     return 'grandfather';
+//   }
+// }
+// console.log(generation(2, "f"));
+// console.log(generation(-2, "m"));
+// console.log(generation(1, "f"));
+//----------------------------------------------------------------------
+// A tetrahedron is a pyramid with a triangular base and three sides. A tetrahedral number is a number of items within a tetrahedron.
+// Create a function that takes an integer n and returns the nth tetrahedral number.
+// function tetra(n) {
+//   return (n * (n + 1) * (n + 2)) / 6;
+// }
+// console.log(tetra(2));
+// console.log(tetra(5));
+// console.log(tetra(6));
+//----------------------------------------------------------------------
+// According to the lodash documentation, _.compact creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+// Your task is to build this helper function without using lodash. You will write a function that receives an array and removes all falsey values.
+// function compact(arr) {
+// 	const result =arr.filter(Boolean);
+//   return result;
+// }
+// console.log(compact([0, 1, false, 2, "", 3]));
+//----------------------------------------------------------------------
+// Create a function that takes a "base number" as an argument. This function should return another function which takes a new argument, and returns the sum of the "base number" and the new argument.
+// function makePlusFunction(baseNum) {
+// 	return baseNum+10;
+// }
+// const plusTen = makePlusFunction();
+// console.log(makePlusFunction(188));
+//----------------------------------------------------------------------
+// Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+// function toArray(obj) {
+// 	let arr = [];
+//   return arr = obj;
+// }
+// console.log(toArray({ a: 1, b: 2 }));
+//----------------------------------------------------------------------
+// Create a function that concatenates n input arrays, where n is variable.
+// function concat(...args) {
+//   let arrArgs = [...args];
+// 	let arr = [];
+//   for(let i=0;i<arrArgs.length;i++){
+//      arr.push(...arrArgs[i]);
+//   }
+//   return arr;
+// }
+// console.log(concat([1, 2, 3], [4, 5], [6, 7]));
+//----------------------------------------------------------------------
+// Write a function that returns an anonymous function, which transforms its input by adding a particular suffix at the end.
+// function add_suffix(suffix) {
+// 	let suf = "ly";
+//   return suffix + suf;
+// }
+// console.log(add_suffix("hopeless"));
+//----------------------------------------------------------------------
+// This Triangular Number Sequence is generated from a pattern of dots that form a triangle. The first 5 numbers of the sequence, or dots, are:
+// 1, 3, 6, 10, 15
+// This means that the first triangle has just one dot, the second one has three dots, the third one has 6 dots and so on. Write a function that returns the number of dots when given its corresponding triangle number of the sequence.
+// function triangle(n) {
+// 	return n*(n+1) / 2
+// }
+// console.log(triangle(1));
+// console.log(triangle(6));
+// console.log(triangle(215));
+//----------------------------------------------------------------------
+// Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two methods getArea() (PI*r^2) and getPerimeter() (2*PI*r) which give both respective areas and perimeter (circumference).For help with this class, I have provided you with a Rectangle constructor which you can use as a base example.
+// class Circle {
+// 	// put your code here
+//   constructor(radius, pi){
+//     this.radius = radius
+//     this.pi = 3.14
+//   }
+//   getArea(){return (this.radius**2)*this.pi}
+//   getPerimeter(){return this.pi*2*this.radius}
+// }
+// let q = new Circle(4.44);
+// console.log(q.getArea());
+// console.log(q.getPerimeter());
+//----------------------------------------------------------------------
+// Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item. Change will always be represented in the following order: quarters, dimes, nickels, pennies.
+//quarters = 1/4 ; dimes =10; nickels =5; pennies =1;
+// function changeEnough(change, amountDue) {
+// 	let sum = change[0]*0.25 + change[1]*0.1 + change[2]*0.05 + change[3]*0.01;
+// 	return sum >= amountDue;
+// }
+// console.log(changeEnough([2, 100, 0, 0], 14.11));
+//----------------------------------------------------------------------
+// Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+// function arrayOfMultiples (num, length) {
+//   let multiple = [];
+//     for(let i=1;i<=length;i++){
+//         multiple.push(num*i); 
+//   }
+//    return multiple;
+// }
+// console.log(arrayOfMultiples(7, 5));
+//----------------------------------------------------------------------
+// Create a function that takes an object and returns the keys and values as separate arrays.
+// function keysAndValues(obj) {
+//   return [Object.keys(obj), Object.keys(obj).map(x => obj[x])];
+// }
+// console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
+//----------------------------------------------------------------------
+//Write a function that converts an object into an array of keys and values.
+// function objectToArray(obj) {
+//   let arr =[];
+// 	arr.push(obj);
+//   return arr;
+// }
+// function objectToArray(obj) {
+// 	const myArray = Object.entries(obj);
+// 	return myArray;
+// }
+// console.log(objectToArray({likes: 2,dislikes: 3,followers: 10}));
+//----------------------------------------------------------------------
+// Write a class called Rectangle that represents a rectangular two-dimensional region. It should have the following constructor:constructor (x, y, width, height)
+// class rectangle {
+//   constructor(x, y, width, height) {
+//     this.width = width;
+//     this.height = height;
+//     this.x = x;
+//     this.y = y;
+//   }
+//   toString() {
+// 		const {x, y, width, height} = this;
+// 		return `[x=${x}, y=${y}, width=${width}, height=${height}]`;
+// 	}
+// }
+// let q = new rectangle(1,2,3,4);
+//  console.log(q.toString());
+//----------------------------------------------------------------------
+// Given a number, n, return a function which adds n to the number passed to it.
+// function add(n) {
+// 	  return adding = m => n+m;
+// }
+// console.log(add(0)(20));
+//----------------------------------------------------------------------
+// Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
+function intWithinBounds(n, lower, upper) {
+	if(n>lower && n<upper && Number.isInteger(n)){
+    return true;
+  }else{
+    return false;
   }
 }
-console.log(generation(2, "f"));
-console.log(generation(-2, "m"));
-console.log(generation(1, "f"));
+console.log(intWithinBounds(3, 1, 9));
+console.log(intWithinBounds(6, 1, 6));
+console.log(intWithinBounds(4.5, 3, 8));
