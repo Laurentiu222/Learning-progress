@@ -541,13 +541,177 @@
 // console.log(add(0)(20));
 //----------------------------------------------------------------------
 // Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
-function intWithinBounds(n, lower, upper) {
-	if(n>lower && n<upper && Number.isInteger(n)){
-    return true;
-  }else{
-    return false;
-  }
-}
-console.log(intWithinBounds(3, 1, 9));
-console.log(intWithinBounds(6, 1, 6));
-console.log(intWithinBounds(4.5, 3, 8));
+// function intWithinBounds(n, lower, upper) {
+// 	if(n>lower && n<upper && Number.isInteger(n)){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// console.log(intWithinBounds(3, 1, 9));
+// console.log(intWithinBounds(6, 1, 6));
+// console.log(intWithinBounds(4.5, 3, 8));
+//----------------------------------------------------------------------
+// function rever(str) {
+//   let revStr = [];
+//   for (let i = str.length-1; i >= 0; i--) {
+//     revStr.push(str[i]);
+//   }
+//   return revStr;
+// }
+// console.log(rever("banana"));
+//----------------------------------------------------------------------
+// A repdigit is a positive number composed out of the same digit. Create a function that takes an integer and returns whether it's a repdigit or not.
+// function isRepdigit(num) {
+//   if (num < 0) {
+//     return false;
+//   } else if (num > 0 && num % 11 === 0) {
+//     return true;
+//   } else if (num === 0) {
+//     return true;
+//   } else if (num > 0 && num % 11 % 11) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isRepdigit(66));
+// console.log(isRepdigit(0));
+// console.log(isRepdigit(-11));
+// console.log(isRepdigit(55));
+// console.log(isRepdigit(-12));
+// console.log(isRepdigit(111));
+// console.log(isRepdigit(6))
+// console.log(isRepdigit(66))
+// console.log(isRepdigit(666))
+// console.log(isRepdigit(6666))
+// console.log(isRepdigit(1001))
+//----------------------------------------------------------------------
+// In this challenge you will be given an array similar to the following:[[3], 4, [2], [5], 1, 6]
+// In words, elements of the array are either an integer or an array containing a single integer. We humans can clearly see that this array can reasonably be sorted according to "the content of the elements" as:
+// Create a function that, given an array similar to the above, sorts the array according to the "content of the elements".
+// function sortIt(arr) {
+// 	return arr.sort();
+// }
+// console.log(sortIt([4, 1, 3]));
+// console.log(sortIt([[4], [1], [3]]));
+// console.log(sortIt([4, [1], 3]));
+// console.log(sortIt([[4], 1, [3]]));
+// console.log(sortIt([[3], 4, [2], [5], 1, 6]));
+//----------------------------------------------------------------------
+// Create a function that takes in a number as a string n and returns the number without trailing and leading zeros.
+// function removeLeadingTrailing(n) {
+// 	return  parseFloat(n).toString();
+// }
+// console.log(removeLeadingTrailing("230.000"));
+// console.log(removeLeadingTrailing("00402"));
+// console.log(removeLeadingTrailing("03.1400"));
+// console.log(removeLeadingTrailing("30"));
+//----------------------------------------------------------------------
+// Create a function that returns true if two arrays contain identical values, and false otherwise.
+// Fix this broken code!
+// function checkEquals(arr1, arr2) {
+//   for (let index = 0; index < arr1.length; index++) {
+//     if (arr1[index] !== arr2[index]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(checkEquals([1, 2], [1, 3]));
+// console.log(checkEquals([1, 2], [1, 2]));
+// console.log(checkEquals([4, 5, 6], [4, 5, 6]));
+//----------------------------------------------------------------------
+// Write a function that returns an anonymous function, which adds n to its input
+// function addsNum(n) {
+// 	 return n;
+// }
+// let adds1 = function(m){
+//   return  addsNum(m)+1;
+// }
+// console.log(adds1(3));
+// console.log(adds1(44));
+// console.log(adds1(32));
+// console.log(adds1(0));
+//----------------------------------------------------------------------
+// I'm trying to write a function to flatten an array of subarrays into one array. (Suppose I am unware there is a .flat() method in the Array prototype). In other words, I want to transform this: [[1, 2], [3, 4]] into [1, 2, 3, 4].
+// function flatten(arr) {
+//   arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     arr2.push(arr[i]);
+//   }
+//   return arr2.flat(); 
+// }
+// console.log(flatten([[1, 2], [3, 4]]));
+// console.log(flatten([["a", "b"], ["c", "d"]]));
+// console.log(flatten([[true, false], [false, false]]));
+//----------------------------------------------------------------------
+// Create a function that takes an array of numbers and returns the second largest number.
+// function secondLargest(arr) {
+// 	 arr.sort();
+//    console.log(arr);
+//    return arr.at(-2);
+// }
+// console.log(secondLargest([10, 40, 30, 20, 50]));
+// console.log(secondLargest([54, 23, 11, 17, 10]));
+//----------------------------------------------------------------------
+// Create a function that takes two arguments: the original price and the discount percentage as integers and returns the final price after the discount.
+// function dis(price, discount) {
+// 	return price - (price *(discount/100));
+// }
+// console.log(dis(1500, 50));
+// console.log(dis(89, 20));
+// console.log(dis(100, 75));
+//----------------------------------------------------------------------
+// Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+// function calculator(num1, operator, num2) {
+// 	if(operator ==='+'){
+//     console.log('+');
+//     return num1 + num2;
+//   }else if(operator ==='*'){
+//     console.log('*');
+//     return num1 * num2;
+//   }else if(operator ==='-'){
+//     console.log('-');
+//     return num1 - num2;
+//   }else if(operator ==='/'){
+//     console.log('/');
+//     return num1 / num2;
+//   }
+// }
+// console.log(calculator(2, "+", 2));
+// console.log(calculator(2, "*", 2));
+// console.log(calculator(4, "/", 2));
+// console.log(calculator(4, "-", 2));
+// console.log(calculator(15, "-", 25));
+//----------------------------------------------------------------------
+// Mary wants to run a 25-mile marathon. When she attempts to sign up for the marathon, she notices the sign-up sheet doesn't directly state the marathon's length. Instead, the marathon's length is listed in small, different portions. Help Mary find out how long the marathon actually is.
+// function marathonDistance(d) {
+//   let sum;
+// 	for(let i=0;i<d.length;i++){
+//     sum = d.reduce((accumulator,currentValue)=>accumulator + currentValue)
+//   }
+//    if(sum === 25){
+//     return true;
+//    }else{
+//     return false;
+//    }
+// }
+// console.log(marathonDistance([1, 2, 3, 4]));
+// console.log(marathonDistance([1, 9, 5, 8, 2]));
+// console.log(marathonDistance([-6, 15, 4]));
+//----------------------------------------------------------------------
+// Create a function that takes the height and radius of a cone as arguments and returns the volume of the cone rounded to the nearest hundredth.
+// function coneVolume(h, r) {
+//   return (1 / 3) * (r ** r) * (h * 3.14);
+// }
+// console.log(coneVolume(3, 2));
+//----------------------------------------------------------------------
+// Create a function that takes a country's name and its area as arguments and returns the area of the country's proportion of the total world's landmass
+// function areaOfCountry(name, area) {
+//   let division = 510100000 / area;
+//   let per = division / 100;
+// 	return `${name} is ${per} of the total world's landmass`;
+// }
+// console.log(areaOfCountry("USA", 9372610));
