@@ -772,3 +772,23 @@
 // console.log(jazzify(["G", "F", "C"]));
 // console.log(jazzify(["Dm", "G", "E", "A"]));
 // console.log(jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]));
+//----------------------------------------------------------------------
+// Given an array of boxes, create a function that returns the total volume of all those boxes combined together. A box is represented by an array with three elements: length, width and height.
+// function totalVolume(...boxes) {
+//   let sum=0;
+// 	for (let i=0; i<boxes.length; i++) {
+// 		sum+=boxes[i][0] * boxes[i][1] * boxes[i][2];
+// 	}
+// 	return sum;
+// }
+// console.log(totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]));
+//----------------------------------------------------------------------
+// Return the sum of all items in an array, where each item is multiplied by its index (zero-based). For empty arrays, return 0.
+function indexMultiplier(arr) {
+  let sum=0;
+  	for (let i=0; i<arr.length; i++) {
+  		sum+=arr[i]*i;
+  	}
+  	return sum;
+}
+console.log(indexMultiplier([1, 2, 3, 4, 5]));
