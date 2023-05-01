@@ -715,3 +715,60 @@
 // 	return `${name} is ${per} of the total world's landmass`;
 // }
 // console.log(areaOfCountry("USA", 9372610));
+//----------------------------------------------------------------------
+// Create a function that takes an array of numbers arr, a string str and return an array of numbers as per the following rules:
+// "Asc" returns a sorted array in ascending order.
+// "Des" returns a sorted array in descending order.
+// "None" returns an array without any modification.
+// function ascDesNone(arr, str) {
+//   let reversArr=[];
+// 	if(str === "Asc"){
+//     return arr.sort();
+//   }else if(str === "Des"){
+//     for(let i=arr.length-1;i>=0;i--){
+//       reversArr.push(arr[i]);
+//     }
+//     return reversArr;
+//   }else{
+//     return arr;
+//   }
+// }
+// console.log(ascDesNone([4, 3, 2, 1], "Asc" ));
+// console.log(ascDesNone([7, 8, 11, 66], "Des"));
+// console.log(ascDesNone([1, 0, 1, 0], "Asc"));
+// console.log(ascDesNone([1, 0, 1, 0], "None"));
+//----------------------------------------------------------------------
+// Create a function that takes a number (step) as an argument and returns the amount of boxes in that step of the sequence.
+// Step 0: Start with 0
+// Step 1: Add 3
+// Step 2: Subtract 1
+// Repeat Step 1 & 2
+// function boxSeq(step) {
+//   let num = 0;
+//   for(let i=0;i<=step;i++){
+//   if(step === 0){
+//     num =  0;
+//   }else if(step %2 !==0 ){
+//     num = i+3-1;
+//   }else if(step % 2 ===0){
+//     num = i -1;
+//   }
+//  }
+//  return num;
+// }
+// console.log(boxSeq(0));
+// console.log(boxSeq(1));
+// console.log(boxSeq(5));
+// console.log(boxSeq(99));
+//----------------------------------------------------------------------
+// Create a function which concatenates the number 7 to the end of every chord in an array.
+// function jazzify(arr) {
+//   let newArr=[];
+// 	for(let i=0;i<arr.length;i++){
+//     newArr.push(arr[i] + "7");
+//   }
+//   return newArr;
+// }
+// console.log(jazzify(["G", "F", "C"]));
+// console.log(jazzify(["Dm", "G", "E", "A"]));
+// console.log(jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]));

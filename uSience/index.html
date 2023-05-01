@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="styles.css" , rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+  <title>μSience</title>
+</head>
+
+<body>
+  <section>
+    <div class="container ">
+      <div class="titleOfTwo">
+        <h1 class="miu">μ</h1>
+        <h1 class="sience">Sience</h1>
+      </div>
+      <div class="downArrow">
+      <span class="arrow">&#8595</span>
+    </div>
+    </div>
+  </section>
+  <section class="logo">
+    <div class="container reveal">
+      <div class="cards">
+        <div class="hideMeAfter5Seconds">
+          <div class="middle">
+            <div class="text-card">
+              <h1 class="miu2">μ</h1>
+              <h1 class="sience">Sience</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container reveal">
+          <div id="hide">
+            <div id="apper">
+              <div class="leftSide">
+                <h4 class="miu3">μ</h4>
+                <h4 class="sience3">Sience</h4>
+              </div>
+              <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <i class="gg-menu"></i>
+                </label>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Conditions</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="footer">
+                <div class="foot">
+                  <h1>We care about you</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+  <script>
+    window.addEventListener("scroll", reveal);
+    function reveal() {
+      let reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        let windowheight = window.innerHeight;
+        let revealtop = reveals[i].getBoundingClientRect().top;
+        let revealpoint = 150;
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+  </script>
+  <script>setTimeout(() => {
+      const apper = document.getElementById('hide');
+      hide.style.visibility = 'hidden';
+    }, 1);</script>
+  <script>
+    setTimeout(() => {
+      const apper = document.getElementById('apper');
+      apper.style.visibility = 'visible';
+    }, 4000)
+  </script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
