@@ -890,3 +890,11 @@
 // console.log(allTruthy(true, false, true));
 // console.log(allTruthy(5, 4, 3, 2, 1, 0));
 //----------------------------------------------------------------------
+// Write a DECIMATOR function which takes a string and decimates it (i.e. it removes the last 1/10 of the characters).
+function DECIMATOR(str) {
+	let length= Math.floor(str.length / 10);
+  return str.slice(0, -length);
+}
+console.log(DECIMATOR("1234567890"));
+console.log(DECIMATOR("1234567890AB"));
+console.log(DECIMATOR("123"));
