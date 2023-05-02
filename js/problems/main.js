@@ -784,11 +784,109 @@
 // console.log(totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]));
 //----------------------------------------------------------------------
 // Return the sum of all items in an array, where each item is multiplied by its index (zero-based). For empty arrays, return 0.
-function indexMultiplier(arr) {
-  let sum=0;
-  	for (let i=0; i<arr.length; i++) {
-  		sum+=arr[i]*i;
-  	}
-  	return sum;
-}
-console.log(indexMultiplier([1, 2, 3, 4, 5]));
+// function indexMultiplier(arr) {
+//   let sum=0;
+//   	for (let i=0; i<arr.length; i++) {
+//   		sum+=arr[i]*i;
+//   	}
+//   	return sum;
+// }
+// console.log(indexMultiplier([1, 2, 3, 4, 5]));
+//----------------------------------------------------------------------
+// Given an integer array, transform that array into a mirror.
+// function mirror(arr) {
+//   for(let i=arr.length-2;i>=0;i--){
+//     arr.push(arr[i])
+//   }
+// return arr
+// }
+// console.log(mirror([0, 2, 4, 6]));
+//----------------------------------------------------------------------
+// Mubashir was reading about currying functions. He needs your help to multiply an array of numbers using currying functions.Create a function which takes an array arr of integers as an argument. This function must return another function, which takes a single integer as an argument and returns a new array.The returned array should consist of each of the elements from the first array multiplied by the integer.
+// function  multiply(arr){
+//    return function(multy){
+//     for(let i=0;i<arr.length;i++){
+//       arr[i] *= multy;
+//     }
+//     return arr;
+//   }
+// }
+// console.log(multiply([1, 2, 3])(2));
+//----------------------------------------------------------------------
+// Count the amount of ones in the binary representation of an integer. For example, since 12 is 1100 in binary, the return value should be 2.
+// function countOnes(i) {
+//   let res = i.toString(2);
+//   let count =0;
+// 	for(let i=0;i<res.length;i++){
+//     if(res.charAt(i) === "1"){
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countOnes(0));
+// console.log(countOnes(999));
+// console.log(countOnes(12));
+//----------------------------------------------------------------------
+// Write a function that takes coordinates of two points on a two-dimensional plane and returns the length of the line segment connecting those two points.
+// function lineLength([x1, y1], [x2, y2]) {
+// 	return Math.sqrt((x2-x1) **2 +(y2-y1)**2)
+// }
+// console.log(lineLength([15, 7], [22, 11]));
+//----------------------------------------------------------------------
+// Create a function that takes an integer n and reverses it.
+// function rev(n) {
+// 	let res = n.toString(10);
+//   let final =" ";
+//   for(let i=res.length-1;i>=0;i--){
+//     final += res[i];
+//   }
+//   return parseInt(final, 10);
+// }
+// console.log(rev(5121));
+//----------------------------------------------------------------------
+// Create the function that takes an array with objects and returns the sum of people's budgets.
+// function getBudgets(arr) {
+//   const totalBudget = arr.reduce((acc, obj) => {
+//     return acc + obj.budget;
+//   }, 0);
+//   return totalBudget;
+// }
+
+// console.log(getBudgets([
+//   { name: "John", age: 21, budget: 23000 },
+//   { name: "Steve",  age: 32, budget: 40000 },
+//   { name: "Martin",  age: 16, budget: 2700 }]));
+//----------------------------------------------------------------------
+// Create a function that takes an array of items and checks if the last item matches the rest of the array concatenated together.
+// function matchLastItem(arr) {
+//   let con ="";
+// 	for(let i=0;i<arr.length-1;i++){
+//     con+=(arr[i]);
+//   }
+//   if(con === arr[arr.length - 1]){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"]));
+// console.log(matchLastItem([1, 1, 1, "11"]));
+// console.log(matchLastItem([8, "thunder", true,"s", "8thundertrues"]) );
+//----------------------------------------------------------------------
+// Create a function that returns true if all parameters are truthy, and false otherwise.
+// function allTruthy(...args) {
+// 	for(let i=0;i<args.length;i++){
+//     if(args[i] === true){
+//        true;
+//     }
+//     else{
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(allTruthy(true, true, true));
+// console.log(allTruthy(true, false, true));
+// console.log(allTruthy(5, 4, 3, 2, 1, 0));
+//----------------------------------------------------------------------
