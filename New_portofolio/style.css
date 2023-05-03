@@ -1,0 +1,155 @@
+* {
+  font-size: 16px;
+}
+
+body {
+  background-image: url(img/Black\ and\ Red\ Modern\ Professional\ Marketing\ Manager\ Resume\ .jpg);
+  background-size: cover;
+  margin: 10px;
+}
+
+.top_page {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13%;
+
+}
+
+img {
+  width: 15%;
+  border-radius: top 25%;
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  /* border: 2px solid red; */
+  padding: 10px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name h1 {
+  font-size: 2.5rem;
+  color: #F9E9E6;
+}
+
+.name p {
+  font-size: 1.5rem;
+  color: #F9E9E6;
+}
+
+main {
+  margin: 15px;
+  display: grid;
+  grid-template-areas: "about education"
+    "prof expirence"
+    "personal expirence";
+  gap: 5%;
+  width: 75%;
+  height: 100%;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  background-color: #C70039;
+  padding: 10px;
+  color: white;
+}
+
+.about p{
+  grid-area: about;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+a {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.prof {
+  grid-area: prof;
+}
+
+.prof p {
+  font-size: 1.5rem;
+  color: #F9E9E6;
+}
+
+.personal {
+  grid-area: personal;
+  color: whitesmoke;
+}
+
+.bar h3 {
+  font-size: 1.5rem;
+}
+
+.progress-bar1 {
+  width: 80%;
+  height: 20px;
+  background-color: #C70039;
+  border-radius: 20px;
+}
+
+.progress-bar2 {
+  width: 100%;
+  height: 20px;
+  background-color: #C70039;
+  border-radius: 20px;
+}
+
+.progress-bar3 {
+  width: 90%;
+  height: 20px;
+  background-color: #C70039;
+  border-radius: 20px;
+}
+
+.progress-bar4 {
+  width: 75%;
+  height: 20px;
+  background-color: #C70039;
+  border-radius: 20px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.education {
+  grid-area: education;
+}
+
+.education p {
+  font-size: 1.5rem;
+  color: #F9E9E6;
+}
+.expirence{
+  grid-area: expirence;
+}
+.expirence p {
+  font-size: 1.5rem;
+  color: #F9E9E6;
+}
+
+ul {
+  border-left: 2px solid #C70039;
+  list-style: disc;
+  padding-left: 13px;
+}
+
+li {
+  color: #C70039;
+}
+
+.fade-in{animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both}
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
