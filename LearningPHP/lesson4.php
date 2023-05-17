@@ -16,6 +16,7 @@
   $color = '';
   $ok = true;
 
+
   if (isset($_POST['submit'])) {
     $ok = true;
 
@@ -41,11 +42,11 @@
       $db = new mysqli(
         'localhost',
         'root',
-        ' ',
-        'php');
+        '',
+       'php');
       $sql = sprintf(
-        "INSERT INTO users(name,gender,color) VALUES(
-          '%s', '%s', '%s')",
+        "INSERT INTO test(name,gender,color) VALUES(
+          '%s', '%s', '%s')", 
           $db->real_escape_string($name),
           $db->real_escape_string($gender),
           $db->real_escape_string($color));
@@ -92,6 +93,7 @@
       }
       ?>>blue</option>
     </select><br>
+    <input type='submit', name='submit'>
 </body>
 
 </html>

@@ -9,6 +9,13 @@
 <body>
   <?php 
   phpinfo();
+  #Checking the connection to database
+  $db = new mysqli('localhost', 'user', 'password', 'php');
+  if($db ->connect_error){
+    echo "Conection faeild";
+  }else{
+    echo "Connection succssesfully";
+  }
   ?>
 </body>
 </html>
