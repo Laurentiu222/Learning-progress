@@ -16,7 +16,7 @@ include("db.php");
   <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: red;">
     PHP Complete CRUD Application
   </nav>
-  <a href="add_new.php" class="btn btn-dark mb-3">Add new</a>
+  <a  href="add_new.php" class="btn btn-dark mb-3">Add new</a>
 <table class="table table-hover text-center mb-3">
   <thead class="table-dark">
     <tr>

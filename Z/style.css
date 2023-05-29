@@ -2,7 +2,6 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
-  font-size: 16px;
 }
 
 .container {
@@ -30,7 +29,6 @@ body {
   top: 20px;
   left: 20px;
 }
-
 .logo1 span {
   color: white; /* μ color */
 }
@@ -38,7 +36,6 @@ body {
 .logo1 .text-blue {
   color: blue; /* "Sience" color */
 }
-
 .line {
   position: absolute;
   right: 0;
@@ -53,6 +50,8 @@ body {
     black 45%
   );
 }
+
+
 
 a {
   color: white;
@@ -91,6 +90,7 @@ a {
   text-align: center;
 }
 
+
 .container:hover .logo {
   opacity: 0;
 }
@@ -110,30 +110,3 @@ a {
 .container:hover .footer {
   opacity: 1;
 }
-
-/* Media Queries for Responsive Design */
-
-@media only screen and (max-width: 600px) {
-  /* Adjustments for smaller screens */
-
-  .logo {
-    font-size: 30px;
-  }
-
-  .logo1 {
-    font-size: 30px;
-    top: 10px;
-    left: 10px;
-  }
-
-  .menu {
-    top: 10px;
-    right: 10px;
-  }
-
-  .footer {
-    bottom: 10px;
-    font-size: 14px;
-  }
-}
-
