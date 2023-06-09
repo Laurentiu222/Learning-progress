@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "hypotenuse.C": "cpp"
+    "hypotenuse.C": "cpp",
+    "stdio.h": "c"
   }
 }
