@@ -1,6 +1,8 @@
 {
   "files.associations": {
     "hypotenuse.C": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "xlocale": "c",
+    "xstring": "c"
   }
 }

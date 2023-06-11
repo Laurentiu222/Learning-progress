@@ -898,3 +898,486 @@
 // console.log(DECIMATOR("1234567890"));
 // console.log(DECIMATOR("1234567890AB"));
 // console.log(DECIMATOR("123"));
+//----------------------------------------------------------------------
+//Write a function calculateAverage that takes an array of numbers as an argument and returns the average of those numbers.
+//  function calculateAverage(arr){
+//   let average = 0;
+//   for(let i=0;i<arr.length;i++){
+//     average +=arr[i];
+//   }
+//   return average / arr.length;
+//  }
+//  const numbers1 = [1, 2, 3, 4, 5];
+//  const average1 = calculateAverage(numbers1);
+//  console.log(average1); // Expected output: 3
+ 
+//  // Test Case 2
+//  const numbers2 = [10, 20, 30, 40, 50];
+//  const average2 = calculateAverage(numbers2);
+//  console.log(average2); // Expected output: 30
+ 
+//  // Test Case 3
+//  const numbers3 = [-5, 0, 5, 10];
+//  const average3 = calculateAverage(numbers3);
+//  console.log(average3); // Expected output: 2.5
+ 
+//  // Test Case 4
+//  const numbers4 = [];
+//  const average4 = calculateAverage(numbers4);
+//  console.log(average4); // Expected output: 0
+ 
+//  // Test Case 5
+//  const numbers5 = [100];
+//  const average5 = calculateAverage(numbers5);
+//  console.log(average5); // Expected output: 100
+//----------------------------------------------------------------------
+//Write a function reverseString that takes a string as an argument and returns the reverse of that string.
+//  function reverseString(str){
+//   let reverseStr = "";
+//   for(let i = str.length -1 ; i>=0;i--){
+//    reverseStr += str[i];
+//   }
+//   return reverseStr;
+//  }
+//  // Test Case 1
+// const str1 = "Hello";
+// const reversed1 = reverseString(str1);
+// console.log(reversed1); // Expected output: "olleH"
+
+// // Test Case 2
+// const str2 = "JavaScript";
+// const reversed2 = reverseString(str2);
+// console.log(reversed2); // Expected output: "tpircSavaJ"
+
+// // Test Case 3
+// const str3 = "racecar";
+// const reversed3 = reverseString(str3);
+// console.log(reversed3); // Expected output: "racecar"
+
+// // Test Case 4
+// const str4 = "";
+// const reversed4 = reverseString(str4);
+// console.log(reversed4); // Expected output: ""
+
+// // Test Case 5
+// const str5 = "12345";
+// const reversed5 = reverseString(str5);
+// console.log(reversed5); // Expected output: "54321"
+//----------------------------------------------------------------------
+//Write a function countVowels that takes a string as an argument and returns the number of vowels (a, e, i, o, u) in that string.
+// function countVowels(str){
+//   let vowels="";
+//   for(let i=0;i<str.length;i++){
+//     if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+//       vowels += str[i];
+//     }
+//   }
+//   return vowels.length;
+// }
+// // Test Case 1
+// const str1 = "Hello World";
+// const vowelCount1 = countVowels(str1);
+// console.log(vowelCount1); // Expected output: 3 (e, o, o)
+
+// // Test Case 2
+// const str2 = "JavaScript";
+// const vowelCount2 = countVowels(str2);
+// console.log(vowelCount2); // Expected output: 3 (a, i, a)
+
+// // Test Case 3
+// const str3 = "aeiou";
+// const vowelCount3 = countVowels(str3);
+// console.log(vowelCount3); // Expected output: 5 (a, e, i, o, u)
+
+// // Test Case 4
+// const str4 = "";
+// const vowelCount4 = countVowels(str4);
+// console.log(vowelCount4); // Expected output: 0
+
+// // Test Case 5
+// const str5 = "qwrtypsdfghjklzxcvbnm";
+// const vowelCount5 = countVowels(str5);
+// console.log(vowelCount5); // Expected output: 0
+//----------------------------------------------------------------------
+// Write a function findMax that takes an array of numbers as an argument and returns the maximum number in that array.
+// function findMax(arr){
+//   let max=-Infinity;
+//   for(let i=0; i< arr.length;i++){
+//     if(max<arr[i]){
+//        max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// // Test Case 1
+// const numbers1 = [1, 2, 3, 4, 5];
+// const max1 = findMax(numbers1);
+// console.log(max1); // Expected output: 5
+
+// // Test Case 2
+// const numbers2 = [10, 20, 30, 40, 50];
+// const max2 = findMax(numbers2);
+// console.log(max2); // Expected output: 50
+
+// // Test Case 3
+// const numbers3 = [-5, 0, 5, 10];
+// const max3 = findMax(numbers3);
+// console.log(max3); // Expected output: 10
+
+// // Test Case 4
+// const numbers4 = [];
+// const max4 = findMax(numbers4);
+// console.log(max4); // Expected output: undefined
+
+// // Test Case 5
+// const numbers5 = [-10, -5, -15, -20];
+// const max5 = findMax(numbers5);
+// console.log(max5); // Expected output: -5
+//----------------------------------------------------------------------
+// Write a function isPalindrome that takes a string as an argument and returns true if the string is a palindrome (reads the same forwards and backwards), and false otherwise.
+// function isPalindrome(str){
+//   let palindrome="";
+//   palindrome  = str.split("").reverse().join("");
+//     if(palindrome == str){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// // Test Case 1
+// const str1 = "level";
+// console.log(isPalindrome(str1)); // Expected output: true
+
+// // Test Case 2
+// const str2 = "racecar";
+// console.log(isPalindrome(str2)); // Expected output: true
+
+// // Test Case 3
+// const str3 = "hello";
+// console.log(isPalindrome(str3)); // Expected output: false
+
+// // Test Case 4
+// const str4 = "noon";
+// console.log(isPalindrome(str4)); // Expected output: true
+
+// // Test Case 5
+// const str5 = "12321";
+// console.log(isPalindrome(str5)); // Expected output: true
+//----------------------------------------------------------------------
+//Write a function removeDuplicates that takes an array of numbers as an argument and returns a new array with duplicates removed.
+// function removeDuplicates(arr){
+//   let newArr = [];
+//   for(let i =0;i<arr.length;i++){
+//     let duplicate = false;
+//     for(let j=0;j<newArr.length;j++){
+//       if(arr[i] === newArr[j]){
+//         duplicate = true;
+//         break;
+//       }
+//     }
+//     if(!duplicate) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+// // Test Case 1
+// const numbers1 = [1, 2, 3, 4, 5];
+// const unique1 = removeDuplicates(numbers1);
+// console.log(unique1); // Expected output: [1, 2, 3, 4, 5]
+
+// // Test Case 2
+// const numbers2 = [10, 20, 30, 20, 10];
+// const unique2 = removeDuplicates(numbers2);
+// console.log(unique2); // Expected output: [10, 20, 30]
+
+// // Test Case 3
+// const numbers3 = [-5, 0, -5, 10, 0];
+// const unique3 = removeDuplicates(numbers3);
+// console.log(unique3); // Expected output: [-5, 0, 10]
+
+// // Test Case 4
+// const numbers4 = [];
+// const unique4 = removeDuplicates(numbers4);
+// console.log(unique4); // Expected output: []
+
+// // Test Case 5
+// const numbers5 = [1, 1, 1, 1, 1];
+// const unique5 = removeDuplicates(numbers5);
+// console.log(unique5); // Expected output: [1]
+//----------------------------------------------------------------------
+//Write a function capitalizeWords that takes a sentence as an argument and returns a new sentence where the first letter of each word is capitalized.
+// function capitalizeWords(str){
+//   let arrSentance = str.split(" ");
+//   const capitalizedWords = [];
+
+//   for(let i=0; i<arrSentance.length; i++){
+//     const word = arrSentance[i];
+//     const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+//     capitalizedWords.push(capitalizedWord);
+//   }
+//   const newSentence = capitalizedWords.join(" ");
+//   return newSentence;
+// }
+// // Test Case 1
+// const sentence1 = "hello world";
+// const capitalized1 = capitalizeWords(sentence1);
+// console.log(capitalized1); // Expected output: "Hello World"
+
+// // Test Case 2
+// const sentence2 = "this is a test";
+// const capitalized2 = capitalizeWords(sentence2);
+// console.log(capitalized2); // Expected output: "This Is A Test"
+
+// // Test Case 3
+// const sentence3 = "javascript is awesome";
+// const capitalized3 = capitalizeWords(sentence3);
+// console.log(capitalized3); // Expected output: "Javascript Is Awesome"
+
+// // Test Case 4
+// const sentence4 = "i love programming";
+// const capitalized4 = capitalizeWords(sentence4);
+// console.log(capitalized4); // Expected output: "I Love Programming"
+
+// // Test Case 5
+// const sentence5 = "aBcDeFg";
+// const capitalized5 = capitalizeWords(sentence5);
+// console.log(capitalized5); // Expected output: "Abcdefg"
+//----------------------------------------------------------------------
+//Write a function sumDigits that takes a positive integer as an argument and returns the sum of its digits.
+// function sumDigits(num){
+//   const digits = num.toString().split("");
+//   let sum = 0;
+//   for(let i=0;i<digits.length;i++){
+//     sum+= parseInt(digits[i]);
+//   }
+//   return sum;
+// }
+// // Test Case 1
+// console.log(sumDigits(123)); // Expected output: 6
+// // Explanation: The digits of 123 are 1, 2, and 3. The sum is 1 + 2 + 3 = 6.
+
+// // Test Case 2
+// console.log(sumDigits(456)); // Expected output: 15
+// // Explanation: The digits of 456 are 4, 5, and 6. The sum is 4 + 5 + 6 = 15.
+
+// // Test Case 3
+// console.log(sumDigits(789)); // Expected output: 24
+// // Explanation: The digits of 789 are 7, 8, and 9. The sum is 7 + 8 + 9 = 24.
+
+// // Test Case 4
+// console.log(sumDigits(111)); // Expected output: 3
+// // Explanation: The digits of 111 are 1, 1, and 1. The sum is 1 + 1 + 1 = 3.
+
+// // Test Case 5
+// console.log(sumDigits(0)); // Expected output: 0
+// // Explanation: The only digit in 0 is 0. The sum is 0.
+//----------------------------------------------------------------------
+//Write a function findLongestWord that takes an array of words as an argument and returns the longest word in that array.
+// function findLongestWord(arr){
+//   let current ="";
+//   for(let i=0;i<arr.length;i++){
+//     if(current.length < arr[i].length){
+//       current = arr[i];
+//     }
+//   }
+//   return current;
+// }
+// // Test Case 1
+// console.log(findLongestWord(["apple", "banana", "cherry"])); // Expected output: "banana"
+
+// // Test Case 2
+// console.log(findLongestWord(["cat", "dog", "elephant", "giraffe"])); // Expected output: "elephant"
+
+// // Test Case 3
+// console.log(findLongestWord(["coding", "is", "fun"])); // Expected output: "coding"
+
+// // Test Case 4
+// console.log(findLongestWord(["open", "your", "eyes"])); // Expected output: "eyes"
+
+// // Test Case 5
+// console.log(findLongestWord([])); // Expected output: ""
+
+// // Test Case 6
+// console.log(findLongestWord(["one"])); // Expected output: "one"
+//----------------------------------------------------------------------
+//Write a function isPrime that takes a number as an argument and returns true if it is a prime number, and false otherwise.
+// function isPrime(num){
+//   let prime = 0;
+//   if(num < 2){
+//     return false;
+//   }
+//   for(let i=2;i<=Math.sqrt(num);i++){
+//     if(num % i == 0){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isPrime(2)); // Expected output: true
+// console.log(isPrime(7)); // Expected output: true
+// console.log(isPrime(12)); // Expected output: false
+// console.log(isPrime(23)); // Expected output: true
+// console.log(isPrime(50)); // Expected output: false
+//----------------------------------------------------------------------
+//Write a function findMissingNumber that takes an array of consecutive numbers (with one missing number) as an argument and returns the missing number.
+// function findMissingNumber(arr){
+//   let n = arr.length +1; // arr length -1
+//   let sum = (n* (n+1)) /2;
+//   let arrSum =0;
+//   let miss= 0;
+//   for(let i=0;i<arr.length;i++){
+//     arrSum += arr[i];
+//   }
+//   miss= sum - arrSum;
+//   return miss;
+// }
+// // Test Case 1
+// const numbers1 = [1, 2, 3, 4, 6, 7, 8, 9];
+// const missing1 = findMissingNumber(numbers1);
+// console.log(missing1); // Expected output: 5
+
+// // Test Case 2
+// const numbers2 = [10, 11, 13, 14, 15];
+// const missing2 = findMissingNumber(numbers2);
+// console.log(missing2); // Expected output: 12
+
+// // Test Case 3
+// const numbers3 = [2, 3, 4, 5, 6, 7, 8];
+// const missing3 = findMissingNumber(numbers3);
+// console.log(missing3); // Expected output: 1
+
+// // Test Case 4
+// const numbers4 = [100, 101, 102, 103, 105];
+// const missing4 = findMissingNumber(numbers4);
+// console.log(missing4); // Expected output: 104
+
+// // Test Case 5
+// const numbers5 = [50, 52, 54, 56, 58];
+// const missing5 = findMissingNumber(numbers5);
+// console.log(missing5); // Expected output: 53
+//----------------------------------------------------------------------
+//Write a function flattenArray that takes a nested array as an argument and returns a new array with all the elements flattened (no nested arrays).
+// function flattenArray(arr){
+//   let newArr = [];
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=0;j<arr[i].length;j++){
+//       newArr.push(arr[i][j]);
+//     }
+//   }
+//   return newArr;
+// }
+// // Test Case 1
+// const nestedArray1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+// const flattenedArray1 = flattenArray(nestedArray1);
+// console.log(flattenedArray1); // Expected output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// // Test Case 2
+// const nestedArray2 = [[10, 20], [30, 40], [50, 60]];
+// const flattenedArray2 = flattenArray(nestedArray2);
+// console.log(flattenedArray2); // Expected output: [10, 20, 30, 40, 50, 60]
+
+// // Test Case 3
+// const nestedArray3 = [[-1, -2], [-3, -4], [-5, -6]];
+// const flattenedArray3 = flattenArray(nestedArray3);
+// console.log(flattenedArray3); // Expected output: [-1, -2, -3, -4, -5, -6]
+
+// // Test Case 4
+// const nestedArray4 = [["a", "b"], ["c", "d"], ["e", "f"]];
+// const flattenedArray4 = flattenArray(nestedArray4);
+// console.log(flattenedArray4); // Expected output: ["a", "b", "c", "d", "e", "f"]
+
+// // Test Case 5
+// const nestedArray5 = [[true, false], [false, true]];
+// const flattenedArray5 = flattenArray(nestedArray5);
+// console.log(flattenedArray5); // Expected output: [true, false, false, true]
+//----------------------------------------------------------------------
+//Write a function findCommonElements that takes two arrays as arguments and returns a new array containing the common elements between the two arrays.
+// function findCommonElements(arr1, arr2){
+//   let common =0;
+//   let commonElemntsArr =[];
+//   for(let i=0;i<arr1.length;i++){
+//     common = arr1[i];
+//     for(let j=0;j<arr2.length;j++){
+//       if(common === arr2[j]){
+//         commonElemntsArr.push(arr1[i]);
+//       }
+//     }
+//   }
+//   return commonElemntsArr;
+// }
+// // Test Case 1
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [4, 5, 6, 7, 8];
+// const commonElements1 = findCommonElements(array1, array2);
+// console.log(commonElements1); // Expected output: [4, 5]
+
+// // Test Case 2
+// const array3 = ["apple", "banana", "orange"];
+// const array4 = ["banana", "grape", "kiwi"];
+// const commonElements2 = findCommonElements(array3, array4);
+// console.log(commonElements2); // Expected output: ["banana"]
+
+
+// // Test Case 4
+// const array7 = [];
+// const array8 = [1, 2, 3];
+// const commonElements4 = findCommonElements(array7, array8);
+// console.log(commonElements4); // Expected output: []
+
+// // Test Case 5
+// const array9 = ["a", "b", "c"];
+// const array10 = ["x", "y", "z"];
+// const commonElements5 = findCommonElements(array9, array10);
+// console.log(commonElements5); // Expected output: []
+//----------------------------------------------------------------------
+//Write a function sortByLength that takes an array of strings as an argument and returns a new array with the strings sorted in ascending order of their lengths.
+// function sortByLength(arr){
+//   arr.sort((a, b) => a.length - b.length);
+//   return arr;
+// }
+// // Test Case 1
+// const strings1 = ["apple", "banana", "orange", "kiwi"];
+// const sorted1 = sortByLength(strings1);
+// console.log(sorted1);
+// // Expected output: ["kiwi", "apple", "banana", "orange"]
+
+// // Test Case 2
+// const strings2 = ["programming", "is", "fun"];
+// const sorted2 = sortByLength(strings2);
+// console.log(sorted2);
+// // Expected output: ["is", "fun", "programming"]
+
+// // Test Case 3
+// const strings3 = ["cat", "elephant", "giraffe", "dog"];
+// const sorted3 = sortByLength(strings3);
+// console.log(sorted3);
+// // Expected output: ["cat", "dog", "elephant", "giraffe"]
+
+// // Test Case 4
+// const strings4 = ["a", "bb", "ccc", "dddd"];
+// const sorted4 = sortByLength(strings4);
+// console.log(sorted4);
+// // Expected output: ["a", "bb", "ccc", "dddd"]
+
+// // Test Case 5
+// const strings5 = [];
+// const sorted5 = sortByLength(strings5);
+// console.log(sorted5);
+// // Expected output: []
+//----------------------------------------------------------------------
+//Write a function reverseWords that takes a sentence as an argument and returns a new sentence with the words reversed.
+// function reverseWords(str){
+//   let words = str.split(" ");
+//   let reversedWords  = words.reverse();
+//   const newSentence = reversedWords.join(" ");
+//   return newSentence;
+// }
+// const sentence1 = "Hello world!";
+// console.log(reverseWords(sentence1)); // Output: "world! Hello"
+
+// const sentence2 = "I love JavaScript";
+// console.log(reverseWords(sentence2)); // Output: "JavaScript love I"
+
+// const sentence3 = "VsCode is amazing";
+// console.log(reverseWords(sentence3)); // Output: "amazing is OpenAI"
