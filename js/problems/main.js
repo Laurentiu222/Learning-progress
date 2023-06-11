@@ -1381,3 +1381,245 @@
 
 // const sentence3 = "VsCode is amazing";
 // console.log(reverseWords(sentence3)); // Output: "amazing is OpenAI"
+//----------------------------------------------------------------------
+//Write a function truncateString that takes a string and a number as arguments and returns a truncated version of the string, with the length limited to the specified number of characters. If the string exceeds the specified length, it should be truncated and an ellipsis ("...") should be appended to the end.
+// function truncateString(str, num){
+//   let truncate = str.length;
+//   if(truncate <= num){
+//     return str;
+//   }else if(truncate > num){
+//     truncate = str.substring(0,num) + "...";
+//   }
+//   return truncate;
+// }
+// // Test Case 1
+// console.log(truncateString("Hello, world!", 5));
+// // Expected output: "Hello..."
+
+// // Test Case 2
+// console.log(truncateString("Lorem ipsum dolor sit amet", 10));
+// // Expected output: "Lorem ipsu..."
+
+// // Test Case 3
+// console.log(truncateString("Short string", 20));
+// // Expected output: "Short string"
+
+// // Test Case 4
+// console.log(truncateString("Another string", 12));
+// // Expected output: "Another str..."
+
+// // Test Case 5
+// console.log(truncateString("Long string that exceeds the limit", 15));
+// // Expected output: "Long string..."
+
+// // Test Case 6
+// console.log(truncateString("", 5));
+// // Expected output: ""
+
+// // Test Case 7
+// console.log(truncateString("Just a short string", 30));
+// // Expected output: "Just a short string"
+
+// // Test Case 8
+// console.log(truncateString("Single character", 1));
+// // Expected output: "S..."
+
+// // Test Case 9
+// console.log(truncateString("Apples and oranges", 0));
+// // Expected output: "..."
+
+// // Test Case 10
+// console.log(truncateString("1234567890", 10));
+// // Expected output: "1234567890"
+//----------------------------------------------------------------------
+//Given an integer array nums and an integer k, return the k most frequent element.
+// function topKFrequent(nums, k){
+//   let buff = 0;
+//   let freqArr = [];
+//   for(let i=0;i<nums.length;i++){
+//     if(nums[i] == k){
+//       buff++;
+//     }
+//   }
+//   return  buff;
+// }
+// // Test Case 1
+// const nums1 = [1, 1, 1, 2, 2, 3];
+// const k1 = 2;
+// console.log(topKFrequent(nums1, k1));
+// // Expected output: [1, 2]
+
+// // Test Case 2
+// const nums2 = [1, 2, 2, 3, 3, 3,3, 4, 4, 4, 4];
+// const k2 = 3;
+// console.log(topKFrequent(nums2, k2));
+// // Expected output: [4, 3, 2]
+
+// // Test Case 3
+// const nums3 = [5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8];
+// const k3 = 1;
+// console.log(topKFrequent(nums3, k3));
+// // Expected output: [5]
+
+// // Test Case 4
+// const nums4 = [1, 2, 3, 4, 5];
+// const k4 = 5;
+// console.log(topKFrequent(nums4, k4));
+// // Expected output: [1, 2, 3, 4, 5]
+
+// // Test Case 5
+// const nums5 = [1, 2, 2, 3, 3, 3];
+// const k5 = 0;
+// console.log(topKFrequent(nums5, k5));
+// // Expected output: []
+
+// // Test Case 6
+// const nums6 = [1];
+// const k6 = 1;
+// console.log(topKFrequent(nums6, k6));
+// // Expected output: [1]
+//----------------------------------------------------------------------
+//Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+// function topKFrequent(nums, k) {
+//   const frequencyMap = new Map();
+
+//   // Step 1: Create a frequency map
+//   for (let num of nums) {
+//     frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+//   }
+
+//   // Step 2: Sort the unique numbers based on their frequencies
+//   const uniqueNums = [...frequencyMap.keys()];
+//   uniqueNums.sort((a, b) => frequencyMap.get(b) - frequencyMap.get(a));
+
+//   // Step 3: Return the top k frequent elements
+//   return uniqueNums.slice(0, k);
+// }
+// // Test Case 1
+// const nums1 = [1, 1, 1, 2, 2, 3];
+// const k1 = 2;
+// console.log(topKFrequent(nums1, k1));
+// // Expected output: [1, 2]
+
+// // Test Case 2
+// const nums2 = [1, 2, 2, 3, 3, 3,3, 4, 4, 4, 4];
+// const k2 = 3;
+// console.log(topKFrequent(nums2, k2));
+// // Expected output: [4, 3, 2]
+
+// // Test Case 3
+// const nums3 = [5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8];
+// const k3 = 1;
+// console.log(topKFrequent(nums3, k3));
+// // Expected output: [5]
+
+// // Test Case 4
+// const nums4 = [1, 2, 3, 4, 5];
+// const k4 = 5;
+// console.log(topKFrequent(nums4, k4));
+// // Expected output: [1, 2, 3, 4, 5]
+
+// // Test Case 5
+// const nums5 = [1, 2, 2, 3, 3, 3];
+// const k5 = 0;
+// console.log(topKFrequent(nums5, k5));
+// // Expected output: []
+
+// // Test Case 6
+// const nums6 = [1];
+// const k6 = 1;
+// console.log(topKFrequent(nums6, k6));
+// // Expected output: [1]
+//----------------------------------------------------------------------
+//Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+// function productExceptSelf(nums){
+//   let product = 1;
+//   let arr = [];
+//   for(let i=0;i<nums.length;i++){
+//     arr[i] = product;
+//     product = product * nums[i];
+//   }
+//    product = 1;
+//    for(let i = nums.length-1; i>=0;i--){
+//     arr[i] = product;
+//     product = product * nums[i];
+//    }
+//    return arr;
+// }
+// // Test Case 1
+// const nums1 = [1, 2, 3, 4, 5];
+// const answer1 = productExceptSelf(nums1);
+// console.log(answer1);
+// // Expected output: [120, 60, 40, 30, 24]
+
+// // Test Case 2
+// const nums2 = [2, 4, 6, 8];
+// const answer2 = productExceptSelf(nums2);
+// console.log(answer2);
+// // Expected output: [192, 96, 64, 48]
+
+// // Test Case 3
+// const nums3 = [0, 1, 2, 3, 4];
+// const answer3 = productExceptSelf(nums3);
+// console.log(answer3);
+// // Expected output: [24, 0, 0, 0, 0]
+
+// // Test Case 4
+// const nums4 = [-1, -2, -3, -4, -5];
+// const answer4 = productExceptSelf(nums4);
+// console.log(answer4);
+// // Expected output: [120, 60, 40, 30, 24]
+
+// // Test Case 5
+// const nums5 = [1];
+// const answer5 = productExceptSelf(nums5);
+// console.log(answer5);
+// // Expected output: [1]
+// const nums6 = [1,2,3,4];
+// const answer6 = productExceptSelf(nums1);
+// console.log(answer6);
+//----------------------------------------------------------------------
+//Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+function longestConsecutive(nums){
+  let elem = 0;
+  let sort = nums.sort((a,b) => a -b);
+  for(let i=1; i< sort.length;i++){
+    if(sort[i] !== sort[i-1]){
+      if (nums[i] === nums[i - 1] + 1){
+       elem = sort[i];
+      }
+    }
+  }
+  return elem;
+}
+// Test Case 1
+const nums1 = [100, 4, 200, 1, 3, 2];
+console.log(longestConsecutive(nums1));
+// Expected output: 4 (as the longest consecutive sequence is [1, 2, 3, 4])
+
+// Test Case 2
+const nums2 = [0, 1, 5, 10, 7];
+console.log(longestConsecutive(nums2));
+// Expected output: 1 (as there are no consecutive elements in the array)
+
+// Test Case 3
+const nums3 = [1, 2, 3, 4, 5];
+console.log(longestConsecutive(nums3));
+// Expected output: 5 (as the array itself is the longest consecutive sequence)
+
+// Test Case 4
+const nums4 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+console.log(longestConsecutive(nums4));
+// Expected output: 9 (as the longest consecutive sequence is [1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+// Test Case 5
+const nums5 = [];
+console.log(longestConsecutive(nums5));
+// Expected output: 0 (as the array is empty)
+
+// Test Case 6
+const nums6 = [1];
+console.log(longestConsecutive(nums6));
+// Expected output: 1 (as there is only one element in the array)
+
+
