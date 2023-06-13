@@ -129,7 +129,7 @@
 // function profitableGamble(prob, prize, pay) {
 // 	if(prob * prize > pay){
 //     return true;
-//   }else { 
+//   }else {
 //     return false;
 //   }
 // }
@@ -494,7 +494,7 @@
 // function arrayOfMultiples (num, length) {
 //   let multiple = [];
 //     for(let i=1;i<=length;i++){
-//         multiple.push(num*i); 
+//         multiple.push(num*i);
 //   }
 //    return multiple;
 // }
@@ -641,7 +641,7 @@
 //   for (let i = 0; i < arr.length; i++) {
 //     arr2.push(arr[i]);
 //   }
-//   return arr2.flat(); 
+//   return arr2.flat();
 // }
 // console.log(flatten([[1, 2], [3, 4]]));
 // console.log(flatten([["a", "b"], ["c", "d"]]));
@@ -910,22 +910,22 @@
 //  const numbers1 = [1, 2, 3, 4, 5];
 //  const average1 = calculateAverage(numbers1);
 //  console.log(average1); // Expected output: 3
- 
+
 //  // Test Case 2
 //  const numbers2 = [10, 20, 30, 40, 50];
 //  const average2 = calculateAverage(numbers2);
 //  console.log(average2); // Expected output: 30
- 
+
 //  // Test Case 3
 //  const numbers3 = [-5, 0, 5, 10];
 //  const average3 = calculateAverage(numbers3);
 //  console.log(average3); // Expected output: 2.5
- 
+
 //  // Test Case 4
 //  const numbers4 = [];
 //  const average4 = calculateAverage(numbers4);
 //  console.log(average4); // Expected output: 0
- 
+
 //  // Test Case 5
 //  const numbers5 = [100];
 //  const average5 = calculateAverage(numbers5);
@@ -1318,7 +1318,6 @@
 // const commonElements2 = findCommonElements(array3, array4);
 // console.log(commonElements2); // Expected output: ["banana"]
 
-
 // // Test Case 4
 // const array7 = [];
 // const array8 = [1, 2, 3];
@@ -1580,46 +1579,360 @@
 // console.log(answer6);
 //----------------------------------------------------------------------
 //Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
-function longestConsecutive(nums){
-  let elem = 0;
-  let sort = nums.sort((a,b) => a -b);
-  for(let i=1; i< sort.length;i++){
-    if(sort[i] !== sort[i-1]){
-      if (nums[i] === nums[i - 1] + 1){
-       elem = sort[i];
-      }
-    }
-  }
-  return elem;
-}
-// Test Case 1
-const nums1 = [100, 4, 200, 1, 3, 2];
-console.log(longestConsecutive(nums1));
-// Expected output: 4 (as the longest consecutive sequence is [1, 2, 3, 4])
+// function longestConsecutive(nums){
+//   let elem = 0;
+//   let sort = nums.sort((a,b) => a -b);
+//   for(let i=1; i< sort.length;i++){
+//     if(sort[i] !== sort[i-1]){
+//       if (nums[i] === nums[i - 1] + 1){
+//        elem = sort[i];
+//       }
+//     }
+//   }
+//   return elem;
+// }
+// // Test Case 1
+// const nums1 = [100, 4, 200, 1, 3, 2];
+// console.log(longestConsecutive(nums1));
+// // Expected output: 4 (as the longest consecutive sequence is [1, 2, 3, 4])
 
-// Test Case 2
-const nums2 = [0, 1, 5, 10, 7];
-console.log(longestConsecutive(nums2));
-// Expected output: 1 (as there are no consecutive elements in the array)
+// // Test Case 2
+// const nums2 = [0, 1, 5, 10, 7];
+// console.log(longestConsecutive(nums2));
+// // Expected output: 1 (as there are no consecutive elements in the array)
 
-// Test Case 3
-const nums3 = [1, 2, 3, 4, 5];
-console.log(longestConsecutive(nums3));
-// Expected output: 5 (as the array itself is the longest consecutive sequence)
+// // Test Case 3
+// const nums3 = [1, 2, 3, 4, 5];
+// console.log(longestConsecutive(nums3));
+// // Expected output: 5 (as the array itself is the longest consecutive sequence)
 
-// Test Case 4
-const nums4 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-console.log(longestConsecutive(nums4));
-// Expected output: 9 (as the longest consecutive sequence is [1, 2, 3, 4, 5, 6, 7, 8, 9])
+// // Test Case 4
+// const nums4 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// console.log(longestConsecutive(nums4));
+// // Expected output: 9 (as the longest consecutive sequence is [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-// Test Case 5
-const nums5 = [];
-console.log(longestConsecutive(nums5));
-// Expected output: 0 (as the array is empty)
+// // Test Case 5
+// const nums5 = [];
+// console.log(longestConsecutive(nums5));
+// // Expected output: 0 (as the array is empty)
 
-// Test Case 6
-const nums6 = [1];
-console.log(longestConsecutive(nums6));
-// Expected output: 1 (as there is only one element in the array)
+// // Test Case 6
+// const nums6 = [1];
+// console.log(longestConsecutive(nums6));
+// // Expected output: 1 (as there is only one element in the array)
+//----------------------------------------------------------------------
+//A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+// function isPalindrome(str) {
+//   if (str == "") {
+//     return true;
+//   }
+//   const cleanedPhrase = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+//   for (let i = 0; i < cleanedPhrase.length; i++) {
+//     for (let j = cleanedPhrase.length - 1; j >= 0; j--) {
+//       if (cleanedPhrase[i] == cleanedPhrase[j]) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     }
+//   }
+// }
+// // Test cases for isPalindrome function
+// console.log(isPalindrome("A man, a plan, a canal, Panama!")); // true
+// console.log(isPalindrome("No 'x' in Nixon")); // true
+// console.log(isPalindrome("VsCode is awesome!")); // false
+// console.log(isPalindrome("12321")); // true
+// console.log(isPalindrome("Palindrome")); // false
+//----------------------------------------------------------------------
+//Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+// function threeSum(nums) {
+//   let result = [];
+//   nums.sort((a, b) => a - b);
+  
+//   for (let i = 0; i < nums.length - 2; i++) {
+//     if (i > 0 && nums[i] === nums[i - 1]) {
+//       continue; // Skip duplicate values of i
+//     }
+    
+//     for (let j = i + 1; j < nums.length - 1; j++) {
+//       for (let k = j + 1; k < nums.length; k++) {
+//         if (nums[i] + nums[j] + nums[k] === 0) {
+//           result.push([nums[i], nums[j], nums[k]]);
+//         }
+//       }
+//     }
+//   }
+  
+//   return result;
+// }
+// // Test cases for finding triplets that sum up to zero
+// console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+// // Expected output: [[-1, -1, 2], [-1, 0, 1]]
 
+// console.log(threeSum([0, 0, 0]));
+// // Expected output: [[0, 0, 0]]
 
+// console.log(threeSum([-2, 0, 1, 1, 2]));
+// // Expected output: [[-2, 0, 2], [-2, 1, 1]]
+
+// console.log(threeSum([1, 2, 3, 4, 5]));
+// // Expected output: []
+// console.log(threeSum([-1,0,1,2,-1,-4]));
+//----------------------------------------------------------------------
+//You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).Find two lines that together with the x-axis form a container, such that the container contains the most water.Return the maximum amount of water a container can store.
+// function maxArea(height){
+//   let left =0;
+//   let right = height.length -1;
+//   let maxArea =0;
+//   while(left < right){
+//     let area = (right -left) * Math.min(height[left], height[right]);
+//     maxArea = Math.max(maxArea, area);
+//     if(height[left]< height[right]){
+//     left++;
+//   }else{
+//     right--;}
+//   }
+//   return maxArea;
+// }
+// console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+//----------------------------------------------------------------------
+//You are given an array prices where prices[i] is the price of a given stock on the ith day.You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+// function maxProfit(prices){
+//   let min =prices[0];
+//   let max = 0;
+//   for(let i=1;i<prices.length;i++){
+//     min = Math.min(min, prices[i]);
+//     max = Math.max(max, prices[i] - min);
+//   }
+//   return max;
+// }
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+//----------------------------------------------------------------------
+//Given a string s, find the length of the longest substring without repeating characters.
+// function lengthOfLongestSubstring(s) {
+//   let start = 0;
+//   let maxLen = 0;
+//   let charSet = new Set();
+
+//   for (let i = 0; i < s.length; i++) {
+//     // Check if the current character is already in the set
+//     while (charSet.has(s[i])) {
+//       // Remove the characters from the set and move the start pointer
+//       charSet.delete(s[start]);
+//       start++;
+//     }
+    
+//     // Add the current character to the set
+//     charSet.add(s[i]);
+
+//     // Update the maxLen if necessary
+//     maxLen = Math.max(maxLen, i - start + 1);
+//   }
+
+//   return maxLen;
+// }
+
+// console.log(lengthOfLongestSubstring("abcabcbb")); // Expected output: 3
+//----------------------------------------------------------------------
+//Array Intersection: Write a function that takes two arrays as input and returns an array containing the common elements found in both arrays. For example, if the input arrays are [1, 2, 3, 4, 5] and [4, 5, 6, 7], the output should be [4, 5].
+// function arrayIntersection(arr1, arr2){
+//   let common =[];
+//   for(let i=0; i<arr1.length;i++){
+//     for(let j=0;j<arr2.length;j++){
+//       if(arr1[i] == arr2[j]){
+//         common.push(arr1[i]);
+//       }
+//     }
+//   }
+//   return common;
+// }
+// console.log(arrayIntersection([1, 2, 3, 4, 5], [4, 5, 6, 7]));
+// // Expected output: [4, 5]
+
+// console.log(arrayIntersection([1, 2, 3], [4, 5, 6]));
+// // Expected output: []
+
+// console.log(arrayIntersection([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]));
+// // Expected output: [1, 2, 3, 4, 5]
+
+// console.log(arrayIntersection([1, 2, 3, 4, 5], []));
+// // Expected output: []
+
+// console.log(arrayIntersection([], [4, 5, 6, 7]));
+// // Expected output: []
+
+// console.log(arrayIntersection([], []));
+// // Expected output: []
+//----------------------------------------------------------------------
+//FizzBuzz: Write a function that prints the numbers from 1 to n. But for multiples of three, print "Fizz" instead of the number, and for multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+// function fizzBuzz(n) {
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//       console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("Buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+// console.log(fizzBuzz(15));
+//----------------------------------------------------------------------
+//Sorting Algorithm: Implement a sorting algorithm such as Bubble Sort, Selection Sort, or Merge Sort. Write a function that takes an array as input and returns the sorted array
+// function bubbleSort(arr) {
+//   const n = arr.length;
+//   for (let i = 0; i < n - 1; i++) {
+//     for (let j = 0; j < n - i - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         // Swap arr[j] and arr[j + 1]
+//         const temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
+// const arr = [64, 34, 25, 12, 22, 11, 90];
+// console.log(bubbleSort(arr));
+//----------------------------------------------------------------------
+//You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+// function modifyString(s,k){
+//   let split = Array.from(s);
+//   for(let i=0;i<split.length;i++){
+//     if(split[i] !== split[i].toUpperCase() && k > 0){
+//       split[i] = split[i].toUpperCase();
+//       k--;
+//     }
+//   }
+//   return split.join('');
+// }
+// const inputString = 'hello';
+// const k = 2;
+// const modifiedString = modifyString(inputString, k);
+// console.log(modifiedString); // Output: "HEllo"
+//----------------------------------------------------------------------
+//Create a function which returns the number of true values there are in an array.
+// function countTrue(arr) {
+//   let valuesOfTrue =0;
+//   if(arr.length== 0){
+//     return 0;
+//   }
+// 	for(let i=0;i<arr.length;i++){
+//     if(arr[i] == true){
+//       valuesOfTrue++
+//     }
+//   }
+//   return valuesOfTrue;
+// }
+// const emptyArray = [];
+// console.log(countTrue(emptyArray)); // Output: 0
+
+// const falseArray = [false, false, false];
+// console.log(countTrue(falseArray)); // Output: 0
+
+// const trueArray = [true, true, true];
+// console.log(countTrue(trueArray)); // Output: 3
+
+// const mixedArray = [true, false, true, true, false];
+// console.log(countTrue(mixedArray)); // Output: 3
+
+// const mixedDataArray = [true, 'hello', 42, true, false];
+// console.log(countTrue(mixedDataArray)); // Output: 2
+//----------------------------------------------------------------------
+//Write a function redundant that takes in a string str and returns a function that returns str.
+// function redundant(str) {
+//   return function() {
+//     return str;
+//   }
+// }
+// const myFunction = redundant("Hello, World!");
+// console.log(myFunction()); // Output: "Hello, World!"
+//----------------------------------------------------------------------
+//In a board game, a piece may advance 1-6 tiles forward depending on the number rolled on a six-sided die. If you advance your piece onto the same tile as another player's piece, both of you earn a bonus. Can you reach your friend's tile number in the next roll? Create a function that takes your position a and your friend's position b and returns a boolean representation of whether it's possible to earn a bonus on any die roll.
+// function possibleBonus(a, b) {
+// 	let random = Math.round(Math.random() * 6)+1;
+//   if(Math.abs(a-b)){
+//   if(random + a == b){
+//     return true;
+//   }else{
+//     return false;
+//   }
+//  }else{
+//   return false;
+//  }
+// }
+// console.log(possibleBonus(5, 3));
+// console.log(possibleBonus(0, 6));
+// console.log(possibleBonus(1, 6));
+// console.log(possibleBonus(2, 6));
+// console.log(possibleBonus(3, 4));
+// console.log(possibleBonus(2, 5)); 
+//----------------------------------------------------------------------
+//Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+// function shiftToRight(x, y) {
+// 	return Math.floor(x / Math.pow(2,y));
+// }
+// console.log(shiftToRight(10, 2)); // Output: 2
+// console.log(shiftToRight(15, 3)); // Output: 1
+// console.log(shiftToRight(7, 1)); // Output: 3
+// console.log(shiftToRight(100, 4)); // Output: 6
+// console.log(shiftToRight(0, 5)); // Output: 0
+// console.log(shiftToRight(-8, 2)); // Output: -2
+//----------------------------------------------------------------------
+//Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle.
+// function perimeter(l, num){
+//   return (4*(l=='s')+6.28*(l=='c'))*num
+// }
+// console.log(perimeter('s', 5)); // Output: 20
+// console.log(perimeter('c' ,3)); // Output: 18.84
+// console.log(perimeter('s' ,8.5)); // Output: 34
+// console.log(perimeter('c' ,2.2)); // Output: 13.816
+//----------------------------------------------------------------------
+//Create a function that will return an integer number corresponding to the amount of digits in the given integer num
+// function num_of_digits(num) {
+// 	let  str =  Math.abs(num).toString();
+//   return str.length;
+// }
+// console.log(num_of_digits(123)); // Output: 3
+// console.log(num_of_digits(0)); // Output: 1
+// console.log(num_of_digits(-456)); // Output: 3
+// console.log(num_of_digits(987654321)); // Output: 9
+// console.log(num_of_digits(-1000)); // Output: 4
+//----------------------------------------------------------------------
+//Create a function that takes numbers b and m as arguments and returns the derivative of the function f(x)=x^b with respect to x evaluated at x=m, where b and m are constants.
+// function derivative(b, m) {
+//   const derivativeValue = b * Math.pow(m, b - 1);
+//   return derivativeValue;
+// }
+// console.log(derivative(2, 3)); // Output: 6
+// console.log(derivative(3, 2)); // Output: 12
+// console.log(derivative(4, 5)); // Output: 500
+//----------------------------------------------------------------------
+//Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
+// function sevenBoom(arr) {
+// 	for(let i=0;i,arr.length;i++){
+//     if(arr[i].toString().includes('7')){
+//       return "Boom";
+//     }else{
+//       return "there is no 7";
+//     }
+//   }
+// }
+// console.log(sevenBoom([1, 2, 3])); // Output: there is no 7 in the array
+// console.log(sevenBoom([7, 8, 9])); // Output: Boom!
+// console.log(sevenBoom([10, 20, 30])); // Output: there is no 7 in the array
+// console.log(sevenBoom([17, 27, 37])); // Output: Boom!
+// console.log(sevenBoom([])); // Output: there is no 7 in the array
+//----------------------------------------------------------------------
+//Given a number, n, return a function which adds n to the number passed to it.
+// function add(n) {
+// 	return function(number){
+//     return n + number;
+//   }
+// }
+// const add5 = add(5);
+// console.log(add5(10)); // Output: 15 (10 + 5)
+// console.log(add5(7)); // Output: 12 (7 + 5)
