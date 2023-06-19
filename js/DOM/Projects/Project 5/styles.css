@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+  height: 100vh;
+  background-image: url(img/background-about-me.jpg);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-task-container{
+  width: 350px;
+  padding: 20px 10px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 3px black;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input{
+  flex: 5;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+#add-task{
+  font-size: 1.2rem;
+  padding:5px;
+  flex:1;
+  background-color: white;
+  color: #93c47d;
+  border: #93c47d 2px solid;
+  border-radius: 10px;
+}
+
+#add-task:hover{
+  background-color: #93c47d;
+  color: white;
+}
+
+/*Styling for task added*/
+
+.task{
+  width:100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 3px black;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.task li{
+  list-style-type: none;
+  flex: 4;
+  padding: 5px;
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+.task button{
+  flex:1;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.task .checkTask{
+  color: lightblue;
+  margin-right: 5px;
+  border: solid 2px lightblue;
+  font-size: 1.5rem;
+}
+
+.task .deleteTask{
+  color: #FF6666;
+  margin-right: 5px;
+  border: solid 2px #FF6666;
+  font-size: 1.5rem;
+}
+
+.task .checkTask:hover{
+  background-color: lightblue;
+  color: white;
+}
+.task .deleteTask:hover{
+  background-color: #FF6666;
+  color: white;
+}

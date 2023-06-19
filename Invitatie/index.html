@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Hey</title>
+    <style>
+      .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .is-visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="page1 hidden">
+        <h1>Hey Elena, I created this entire website just to ask you a question...</h1>
+        <h3>Scroll down for a surprise first</h3>
+      </div>
+    </section>
+    <section>
+      <div class="content hidden">
+        <h2>Hope you like them, It took me a while to gather these flowers</h2>
+      </div>
+      <img src="img/Abn39-25-bujori-albi.jpg" class="focus-image hidden">
+    </section>
+    <section>
+      <h1 class="hidden">I've hacked into the Matrix just to ask you this: Can I have the honor of taking you out on a date? I promise to bring my best dad jokes and some seriously good conversations/dance moves.</h1>
+      <h2 class="hidden">Please select one of the two choices</h2>
+      <div class="button-container hidden">
+        <a href="yes.html" class="focus-button">Yes</a>
+        <a href="no.html" class="focus-button">No</a>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.querySelectorAll(".hidden");
+    
+        function checkScroll() {
+          var windowHeight = window.innerHeight;
+    
+          for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            var elementTop = element.getBoundingClientRect().top;
+    
+            if (elementTop - windowHeight <= 0) {
+              element.classList.add("is-visible");
+            }
+          }
+        }
+    
+        window.addEventListener("scroll", checkScroll);
+        checkScroll(); // Call checkScroll initially to apply classes to visible elements
+      });
+    </script>
+  </body>
+</html>
