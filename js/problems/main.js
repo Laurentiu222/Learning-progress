@@ -1936,3 +1936,21 @@
 // const add5 = add(5);
 // console.log(add5(10)); // Output: 15 (10 + 5)
 // console.log(add5(7)); // Output: 12 (7 + 5)
+//----------------------------------------------------------------------
+//Factorial
+// function factorial(number){
+//   if(number == 0 ){
+//     return 1;
+//   }
+//   let result =1;
+//   for(let i=number;i>0;i--){
+//     result *= i;
+//   }
+//   return result;
+// }
+
+// console.log(factorial(5));
+// console.log(factorial(10));
+// console.log(factorial(3));
+// console.log(factorial(0));
+// console.log(factorial(1));
