@@ -55,3 +55,35 @@ body{
 color: white;
 font-size: 2.5rem;
 }
+
+.calculator-grid {
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 2rem;
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+  .calculator-grid {
+    grid-template-columns: repeat(3, 8rem);
+    gap: 10px;
+  }
+  .calculator-grid > button {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 767px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 5rem);
+    gap: 2px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .calculator-grid > button {
+    font-size: 1.2rem;
+  }
+}
